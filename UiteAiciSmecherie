@@ -1,0 +1,95 @@
+//Cancel Sebastian 322 AC
+#include <iostream>
+#include <vector>
+//#include <STL>
+
+using namespace std;
+
+template <class T>
+
+
+class Stack
+{
+    private:
+
+    vector <T> vec;
+
+    public:
+bool Empty()
+{
+    if(vec.empty())
+        return true;
+    else
+        return false;
+
+}
+void push(const T &item)
+{
+    vec.push_back(item);
+}
+T top()
+{
+    if(vec.empty())
+        cout<<"nu sunt elemente";
+    return vec.back();
+}
+void pop()
+{
+    if(vec.empty())
+        cout<<"stiva goala";
+    else
+        vec.pop_back();
+}
+};
+
+int main()
+{
+Stack<int> a;
+Stack<char> b;
+Stack<float> c;
+Stack<string> d;
+
+if(a.Empty())
+{
+    cout<<"Stiva goala";
+}
+
+a.push(4);
+cout<<endl<<"ultimul element : "<<a.top();
+a.push(5);
+a.push(-20);
+a.top();
+cout<<endl<<"ultimul element : "<<a.top();
+a.pop();
+a.top();
+
+
+
+b.push('a');
+b.push('b');
+cout<<endl<<"ultima valoare : "<<b.top();
+b.pop();
+cout<<endl<<"ultima valoare : "<<b.top();
+
+
+c.push(123.1324);
+c.push(765.2345);
+cout<<endl<<"ultima valoare : "<<c.top();
+c.pop();
+cout<<endl<<"ultima valoare : "<<c.top();
+
+
+d.push("exemplu");
+d.push("de problema");
+
+cout<<endl<<"ultima valoare : "<<d.top();
+d.pop();
+cout<<endl<<"ultima valoare : "<<d.top();
+
+
+
+    return 0;
+}
+
+
+
